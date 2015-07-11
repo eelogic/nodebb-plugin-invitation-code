@@ -1,0 +1,40 @@
+{
+  "name": "nodebb-plugin-invitation-code",
+  "version": "0.0.1",
+  "description": "Plugins for NodeBB: Invitation code for registered users",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eelogic/nodebb-plugin-invitation-code"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "invitation",
+    "invitation code"
+  ],
+  "author": {
+    "name": "ethan",
+    "email": "ethan@yunify.com"
+  },
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/eelogic/nodebb-plugin-invitation-code/issues"
+  },
+  "nbbpm": {
+    "compatibility": "^0.6.0"
+  },
+  "homepage": "https://github.com/eelogic/nodebb-plugin-invitation-code",
+  "_id": "nodebb-plugin-invitation@0.0.1",
+  "_npmVersion": "1.4.3",
+  "_npmUser": {
+    "name": "ethan",
+    "email": "ethan@yunify.com"
+  },
+  "maintainers": [
+    {
+      "name": "ethan",
+      "email": "ethan@yunify.com"
+    }
+  ]
+}

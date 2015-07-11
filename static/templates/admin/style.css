@@ -1,0 +1,24 @@
+.table-wrapper {
+  margin-top: 15px;
+}
+
+#invitation-code-table td {
+  font-family: Monaco
+}
+
+#invitation-code-table th:first-child {
+  text-align: center
+}
+
+#invitation-code-table td:first-child {
+  text-align: center
+}
+
+#invitation-code-pagination {
+  display: none;
+  float: right
+}
+
+#invitation-code-pagination .btn-forbidden {
+  cursor: default
+}

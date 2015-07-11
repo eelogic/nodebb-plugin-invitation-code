@@ -1,0 +1,19 @@
+{
+	"id": "nodebb-plugin-invitation-code",
+	"name": "Invitation Code",
+	"description": "Plugins for NodeBB: Invitation code for registered users",
+	"url": "https://github.com/eelogic/nodebb-plugin-invitation-code",
+	"library": "./library.js",
+	"hooks": [
+    { "hook": "static:app.load", "method": "init" },
+    { "hook": "filter:user.account", "method": "customAccount" },
+		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" }
+	],
+	"staticDirs": {
+		"static": "./static"
+	},
+  "scripts": [
+    "static/lib/edit.js"
+  ],
+	"templates": "static/templates"
+}
