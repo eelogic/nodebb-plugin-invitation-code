@@ -69,10 +69,6 @@
     callback(null, header);
   };
 
-  plugin.customAccount = function(params, callback) {
-    callback(null, params);
-  };
-
   module.exports = plugin;
 
 })();
