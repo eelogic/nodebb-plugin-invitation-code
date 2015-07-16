@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-invitation-code",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Plugins for NodeBB: Invitation code for registered users",
   "main": "library.js",
   "repository": {
