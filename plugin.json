@@ -14,5 +14,6 @@
   "scripts": [
     "static/lib/edit.js"
   ],
+  "languages": "./language",
 	"templates": "static/templates"
 }
