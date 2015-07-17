@@ -4,6 +4,22 @@
 
   var INVIATION_CODE_LIMIT = 10;
 
+  function alertSuccess(msg) {
+    require(['translator'], function(translator) {
+      translator.translate('[[invitation_code:' + msg + ']]', function(translated) {
+        app.alertSuccess(translated);
+      });
+    });
+  }
+
+  function alertError(msg) {
+    require(['translator'], function(translator) {
+      translator.translate('[[invitation_code:' + msg + ']]', function(translated) {
+        app.alertError(translated);
+      });
+    });
+  }
+
   function renderBody(codes) {
     var $body = $('#invitation-code-table tbody');
     var trs = [];
@@ -59,7 +75,7 @@
         renderPagination(offset, limit, data.total);
         initSelector();
       } else {
-        app.alertError(err.message);
+        alertError(err.message);
       }
     });
   }
@@ -72,10 +88,10 @@
     var num = prompt('Invitatino Code Number');
     addCodes(num, function(err, codes, total) {
       if(!err) {
-        app.alertSuccess('Add Invitation Code Success');
+        alertSuccess('Add Invitation Code Success');
         renderTable();
       } else {
-        app.alertError(err.message);
+        alertError(err.message);
       }
     });
   });
@@ -127,10 +143,10 @@
       var codes = getSelectCodes();
       dispatchCodes(codes, function(err, data) {
         if(!err) {
-          app.alertSuccess('Dispatch Invitaion Codes Success');
+          alertSuccess('Dispatch Invitaion Codes Success');
           renderTable();
         } else {
-          app.alertError(err.message);
+          alertError(err.message);
         }
       });
     }
@@ -142,10 +158,10 @@
       var codes = getSelectCodes();
       deleteCodes(codes, function(err, data) {
         if(!err) {
-          app.alertSuccess('Delete Invitaion Codes Success');
+          alertSuccess('Delete Invitaion Codes Success');
           renderTable();
         } else {
-          app.alertError(err.message);
+          alertError(err.message);
         }
       });
     }

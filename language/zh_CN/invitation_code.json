@@ -1,4 +1,17 @@
 {
   "invitation_code": "邀请码",
-  "save_code": "提交邀请码"
+  "save_code": "提交邀请码",
+  "Invalid parameter offset and limit": "请求参数错误",
+  "Invalid number to create: ": "创建数量错误",
+  "Invalid codes to dispatch": "邀请码不合法",
+  "Get Invitation Codes Object failed": "获取邀请码对象失败",
+  "Set Invitation Codes Object failed": "写入邀请码对象失败",
+  "Get Invitation Codes Field failed": "获取邀请码失败",
+  "Get User Invitation Code Failed": "获取用户邀请码失败",
+  "Register Invitation Code Failed": "注册邀请码失败",
+  "Invalid codes to delete": "要删除的邀请码不存在",
+  "Delete Codes Failed": "删除邀请码失败",
+  "Add Invitation Code Success": "添加邀请码成功",
+  "Dispatch Invitaion Codes Success": "分配邀请码成功",
+  "Delete Invitaion Codes Success": "删除邀请码成功"
 }

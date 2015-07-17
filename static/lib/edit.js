@@ -2,6 +2,22 @@ $(document).ready(function() {
 
   'use strict';
 
+  function alertSuccess(msg) {
+    require(['translator'], function(translator) {
+      translator.translate('[[invitation_code:' + msg + ']]', function(translated) {
+        app.alertSuccess(translated);
+      });
+    });
+  }
+
+  function alertError(msg) {
+    require(['translator'], function(translator) {
+      translator.translate('[[invitation_code:' + msg + ']]', function(translated) {
+        app.alertError(translated);
+      });
+    });
+  }
+
   $(window).on('action:ajaxify.contentLoaded', function(ev, data) {
     if(data.tpl === 'account/edit') {
       custom();
@@ -12,7 +28,7 @@ $(document).ready(function() {
     var uid = ajaxify.variables.get('theirid');
     getUserInvitationCode(uid, function(err, code) {
       if(err) {
-        app.alertError(err.message);
+        alertError(err.message);
       } else {
         injectInvitationField(code);
       }
@@ -61,9 +77,9 @@ $(document).ready(function() {
       var uid = ajaxify.variables.get('theirid');
       registerInvitationCode(uid, code, function(err) {
         if(err) {
-          app.alertError(err.message);
+          alertError(err.message);
         } else {
-          app.alertSuccess('Register Inviation Code Success');
+          alertSuccess('Register Inviation Code Success');
           setTimeout(function() {
             location.reload(true);
           }, 2000);
